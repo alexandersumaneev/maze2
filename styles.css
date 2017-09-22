@@ -1,0 +1,137 @@
+body {
+    overflow: auto;
+    margin: 1px;
+}
+
+.grid{
+    display: grid;
+    grid-template-areas: "a" "b";
+    grid-template-rows:1fr 1600px;
+    grid-template-columns: 1600px;
+    grid-gap: 1px;
+}
+
+.topmenu{
+    grid-area: a;
+    background-color: red;
+}
+
+.canvasarea{
+    grid-area: b;
+    background-color: white;
+}
+
+#open{
+    background-color: yellowgreen;
+    height:100%;
+    width: 100%;
+
+}
+#image{
+    background-color: black;
+    background-image: url("vselennaia-tumannost-zvezdy.jpg");
+    background-size: contain;
+}
+#save{
+    background-color: yellow;
+    height:100%;
+    width: 100%;
+}
+#preference{
+    background-color: orange;
+    height:100%;
+    width: 100%;
+}
+#about{
+    background-color: blue;
+    height:100%;
+    width: 100%;
+}
+#author{
+    background-color: aquamarine;
+    height:100%;
+    width: 100%;
+}
+
+
+/*------------------------------------*\
+	НАВИГАЦИЯ
+\*------------------------------------*/
+#nav{
+    width:100%;
+    font-weight:bold;
+    margin-bottom:10px;
+    margin-top: 10px;
+    align-self: center;
+    position: fixed;
+    opacity: 0.4;
+    left: 30%;
+
+}
+#nav li{
+    float:left;
+    margin-right:10px;
+    position:relative;
+    display:block;
+}
+#nav li a{
+    display:block;
+    padding:5px;
+    color:#fff;
+    background:#333;
+    text-decoration:none;
+    text-shadow:1px 1px 1px rgba(0,0,0,0.75); /* Тень текста, чтобы приподнять его на немного */
+    -moz-border-radius:4px;
+    -webkit-border-radius:4px;
+    border-radius:4px;
+}
+#nav li a:hover{
+    color:#fff;
+    background:#092534;
+    text-decoration:underline;
+}
+
+/*--- ВЫПАДАЮЩИЕ ПУНКТЫ ---*/
+#nav ul{
+    list-style:none;
+    position:absolute;
+    left:-9999px; /* Скрываем за экраном, когда не нужно (данный метод лучше, чем display:none;) */
+    opacity:0; /* Устнавливаем начальное состояние прозрачности */
+}
+#nav ul li{
+    padding-top:1px; /* Вводим отступ между li чтобы создать иллюзию разделенных пунктов меню */
+    float:none;
+}
+#nav ul a{
+    white-space:nowrap; /* Останавливаем перенос текста и создаем многострочный выпадающий пункт */
+    display:block;
+}
+#nav li:hover ul{ /* Выводим выпадающий пункт при наведении курсора */
+    left:0; /* Приносим его обратно на экран, когда нужно */
+    opacity:1; /* Делаем непрозрачным */
+}
+#nav li:hover a{ /* Устанавливаем стили для верхнего уровня, когда выводится выпадающий список */
+    background:#092534;
+    text-decoration:underline;
+}
+#nav li:hover ul a{ /* Изменяем некоторые стили верхнего уровня при выводе выпадающего пункта */
+    text-decoration:none;
+}
+#nav li:hover ul li a:hover{ /* Устанавливаем стили для выпадающих пунктов, когда курсор наводится на конкретный пункт */
+    background:#333;
+    opacity: 0.7;
+    text-decoration:underline;
+
+}
+
+#nav li:nth-child(4) a{
+    background-color: #05280a;
+}
+#nav li:nth-child(5) a{
+    background-color: #05280a;
+}
+#nav li:nth-child(6) a{
+    background-color: #05280a;
+}
+
+

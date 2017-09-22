@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="pathfinding-browser.min.js"></script>
+   <script src="main.js"></script>
+</head>
+<body onload="onLoadPage()">
+<div class="grid">
+    <div class="topmenu">
+        <ul id="nav">
+            <li>
+                <a href="#">Файл</a>
+                <ul>
+                    <li><a href="#" onclick="openOpen()">Открыть</a></li>
+                    <li><a href="#" onclick="saveOpen()">Сохранить</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#" onclick="prefOpen()">Настройки</a>
+            </li>
+            <li>
+                <a href="#" >Справка</a>
+                <ul>
+                    <li><a href="#" onclick="aboutOpen()">О программе</a></li>
+                    <li><a href="#" onclick="authorOpen()">Об авторе</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Старт</a></li>
+            <li><a href="#">Стоп</a></li>
+            <li><a href="#">Пауза</a></li>
+        </ul>
+    </div>
+    <div class="canvasarea">
+        <div id="image">
+            <canvas id="canvas" height=1600 width="1600"></canvas>
+        </div>
+        <div id="open">
+            <h2>Открыть</h2>
+            <button type="button" onClick="showCanvas()">Закрыть</button>
+        </div>
+        <div id="save">
+            <h2>Сохранить</h2>
+            <button type="button" onClick="showCanvas()">Закрыть</button>
+        </div>
+        <div id="preference">
+            <h2>Настройки</h2>
+            <button type="button" onClick="showCanvas()">Закрыть</button>
+        </div>
+        <div id="about">
+            <h2>О программе</h2>
+            <button type="button" onClick="showCanvas()">Закрыть</button>
+        </div>
+        <div id="author">
+            <h2>Об авторе</h2>
+            <button type="button" onClick="showCanvas()">Закрыть</button>
+        </div>
+    </div>
+</div>
+</body>
+</html>
